@@ -34,7 +34,7 @@ extras_require = {
         'ConfigParser>=3.3.0r2',
     ],
     'docs': [
-        'Sphinx>=1.3',
+        'Sphinx>=1.4.2',
     ],
     'uwsgi': [
         'uWSGI>=2.0.3',
@@ -98,12 +98,11 @@ setup(
             'nara = timegate.examples.nara:NaraHandler',
             'orain = timegate.examples.orain:OrainHandler',
             'pastpages = timegate.examples.pastpages:PastpagesHandler',
-            'po = timegate.examples.po:PoHandler',
             'sg = timegate.examples.sg:SgHandler',
             'si = timegate.examples.si:SiHandler',
             'simple = timegate.examples.simple:ExampleHandler',
             'w3c = timegate.examples.w3c:W3cHandler',
-            'webcite = timegate.examples.webcite:WebciteHandler',
+            'webcite = timegate.examples.webcite:WebCiteHandler',
             'wikia = timegate.examples.wikia:WikiaHandler',
             'wikipedia = timegate.examples.wikipedia:WikipediaHandler',
         ],

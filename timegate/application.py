@@ -12,9 +12,6 @@
 
 from __future__ import absolute_import, print_function
 
-import glob
-import importlib
-import inspect
 import json
 import logging
 import os
@@ -33,10 +30,8 @@ from werkzeug.utils import cached_property, import_string
 from werkzeug.wrappers import Request, Response
 
 from . import constants
-from ._compat import quote, unquote
 from .cache import Cache
 from .config import Config
-from .errors import TimegateError, URIRequestError
 from .handler import Handler, parsed_request
 from .utils import best
 
@@ -116,6 +111,7 @@ class TimeGate(object):
         self.config = Config(None)
         self.config.from_object(constants)
         self.config.update(config or {})
+        self.cache = None
         if cache:
             self.cache = cache
         else:
