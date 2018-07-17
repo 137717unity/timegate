@@ -18,6 +18,8 @@ import os
 import re
 from datetime import datetime
 
+from pkg_resources import iter_entry_points
+
 from dateutil.tz import tzutc
 from link_header import Link, LinkHeader
 from pkg_resources import iter_entry_points
